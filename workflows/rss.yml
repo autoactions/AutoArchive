@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Show Info
         run: |
-          echo '${{ on.rss.outputs.link }}'
-          echo '{"url":"${{ on.rss.outputs.link }}","title":"${{ on.rss.outputs.title }}","description":"${{ on.rss.outputs.contentSnippet }}"}'
+          echo "${{ on.rss.outputs }}"
+          #echo '{"url":"${{ on.rss.outputs.link }}","title":"${{ on.rss.outputs.title }}","description":"${{ on.rss.outputs.contentSnippet }}"}'
       - name: Call API
         uses: actionsflow/axios@v1
         with:
