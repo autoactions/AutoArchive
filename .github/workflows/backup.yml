@@ -2,7 +2,7 @@ name: Backup
 on:
   schedule:
     - cron: "0 0 * * *"
-  repository_dispatch:
+  workflow_dispatch:
 jobs:
   request:
     name: Daily Backup
