@@ -12,7 +12,7 @@ jobs:
         uses: actionsflow/axios@v1
         with:
           url: ${{ secrets.BACKUP_API }}
-          headers: '{"Authorization":"Token ${{ secrets.TOKEN }}"}'
+          headers: '{"Authorization":"Bearer ${{ secrets.API_TOKEN }}"}'
           accept: 200
           timeout: 10000
           method: GET
