@@ -7,7 +7,6 @@ on:
         Authorization: Bearer ${{ secrets.API_TOKEN }}
     itemsPath: items
     deduplicationKey: _id
-    limit: 35
 jobs:
   request:
     name: Request
