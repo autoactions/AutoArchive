@@ -1,0 +1,16 @@
+on:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  request:
+    name: Daily Backup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call API
+        uses: actionsflow/axios@v1
+        with:
+          url: ${{ secrets.BACKUP_API }}
+          headers: '{"Authorization":"Token ${{ secrets.TOKEN }}"}'
+          accept: 200
+          timeout: 10000
+          method: GET
